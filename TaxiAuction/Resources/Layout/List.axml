@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ab="http://schemas.android.com/apk/res/ru.nwdgroup.taxiauction"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    style="@style/Activity">
+    <legacybar.library.bar.LegacyBar
+        android:id="@+id/ActionBar"
+        style="@style/actionbar"
+        ab:title="Баланс: 0000 р."
+        ab:theme="holo_light" />
+    <TextView
+        android:text="Нет заказов"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtNoOrders"
+        android:layout_below="@id/ActionBar" />
+    <legacybar.library.bar.LegacyBar
+        android:id="@+id/bottomActionbar"
+        style="@style/actionbar"
+        ab:theme="holo_light"
+        ab:is_bottom="true"
+        android:layout_alignParentBottom="true" />
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lstOrders"
+        android:background="#00ffffff"
+        android:cacheColorHint="#00ffffff"
+        android:layout_below="@id/txtNoOrders"
+        android:layout_above="@id/bottomActionbar" />
+</RelativeLayout>

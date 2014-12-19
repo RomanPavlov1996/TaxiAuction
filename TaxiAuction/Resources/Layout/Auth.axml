@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ab="http://schemas.android.com/apk/res/ru.nwdgroup.taxiauction"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    style="@style/Activity">
+    <legacybar.library.bar.LegacyBar
+        android:id="@+id/ActionBar"
+        style="@style/actionbar"
+        ab:title="Авторизация"
+        ab:theme="holo_light" />
+    <TextView
+        android:text="Лицензия:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/lblLicense"
+        android:layout_below="@id/ActionBar"
+        android:layout_marginTop="10dp" />
+    <EditText
+        android:inputType="number"
+        android:id="@+id/txtLicense"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:numeric="integer"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/lblLicense"
+        android:layout_alignBaseline="@id/lblLicense" />
+    <EditText
+        android:inputType="textPassword"
+        android:id="@+id/txtPassword"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:password="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/lblLicense"
+        android:layout_alignLeft="@id/txtLicense"
+        android:layout_marginTop="10dp" />
+    <TextView
+        android:text="Пароль:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/lblPassword"
+        android:layout_alignBaseline="@id/txtPassword" />
+    <Button
+        android:text="Войти"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnLogin"
+        android:layout_below="@id/txtPassword"
+        style="@style/Button" />
+    <TextView
+        android:text="Error"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblError"
+        android:textColor="#FF0000"
+        android:layout_below="@id/btnLogin" />
+</RelativeLayout>

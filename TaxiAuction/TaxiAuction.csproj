@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4131E417-6088-4F69-B612-FD0D39791CD0}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TaxiAuction</RootNamespace>
+    <AssemblyName>TaxiAuction</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidApplication>true</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <TargetFrameworkVersion>v2.2</TargetFrameworkVersion>
+    <AndroidSupportedAbis>armeabi%3barmeabi-v7a%3bx86</AndroidSupportedAbis>
+    <MandroidI18n />
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
+    <LangVersion>5</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidLinkMode>Full</AndroidLinkMode>
+    <AndroidLinkSkip>LegacyBar.Library</AndroidLinkSkip>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+    <AndroidStoreUncompressedFileExtensions />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LegacyBar.Library, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Assets\LegacyBar.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Android" />
+    <Reference Include="Mono.Android.Support.v4" />
+    <Reference Include="mscorlib" />
+    <Reference Include="PushSharp.Client.MonoForAndroid">
+      <HintPath>Assets\PushSharp.Client.MonoForAndroid.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Xamarin.Mobile">
+      <HintPath>Assets\Xamarin.Mobile.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Crypto.cs" />
+    <Compile Include="GeolocationService.cs" />
+    <Compile Include="ListActivity.cs" />
+    <Compile Include="AuthActivity.cs" />
+    <Compile Include="Order.cs" />
+    <Compile Include="OrderActivity.cs" />
+    <Compile Include="OrdersListAdapter.cs" />
+    <Compile Include="PushService.cs" />
+    <Compile Include="Requests.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SettingsActivity.cs" />
+    <Compile Include="UserInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <AndroidResource Include="Resources\Layout\Auth.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\Order.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\ListItem.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\List.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Values\Strings.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\AndroidManifest.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <AndroidResource Include="Resources\Menu\ListMenu.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Values-v11\Themes.xml" />
+    <AndroidResource Include="Resources\Values\Themes.xml" />
+    <AndroidResource Include="Resources\Drawable-xhdpi\ic_refresh.png" />
+    <AndroidResource Include="Resources\Drawable-xhdpi\ic_balance.png" />
+    <AndroidResource Include="Resources\Drawable-xhdpi\ic_exit.png" />
+    <AndroidResource Include="Resources\Drawable-mdpi\ic_exit.png" />
+    <AndroidResource Include="Resources\Drawable-mdpi\ic_refresh.png" />
+    <AndroidResource Include="Resources\Drawable-mdpi\ic_balance.png" />
+    <AndroidResource Include="Resources\Drawable-hdpi\ic_exit.png" />
+    <AndroidResource Include="Resources\Drawable-hdpi\ic_refresh.png" />
+    <AndroidResource Include="Resources\Drawable-hdpi\ic_balance.png" />
+    <AndroidResource Include="Resources\Menu\EmptyMenu.xml" />
+    <AndroidResource Include="Resources\Drawable\circules.png" />
+    <AndroidResource Include="Resources\Drawable\Background.xml" />
+    <AndroidResource Include="Resources\Drawable-hdpi\ic_call.png" />
+    <AndroidResource Include="Resources\Drawable-mdpi\ic_call.png" />
+    <AndroidResource Include="Resources\Drawable-xhdpi\ic_call.png" />
+    <AndroidResource Include="Resources\Menu\BaseMenu.xml" />
+    <AndroidResource Include="Resources\Menu\BottomMenu.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Drawable-xhdpi\ic_settings.png" />
+    <AndroidResource Include="Resources\Drawable-xhdpi\ic_location.png" />
+    <AndroidResource Include="Resources\Drawable-mdpi\ic_settings.png" />
+    <AndroidResource Include="Resources\Drawable-mdpi\ic_location.png" />
+    <AndroidResource Include="Resources\Drawable-hdpi\ic_settings.png" />
+    <AndroidResource Include="Resources\Drawable-hdpi\ic_location.png" />
+    <AndroidResource Include="Resources\Xml\Preferences.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+     Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

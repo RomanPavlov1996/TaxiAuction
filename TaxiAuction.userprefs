@@ -1,0 +1,14 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="TaxiAuction\OrderActivity.cs">
+    <Files>
+      <File FileName="TaxiAuction\Requests.cs" Line="158" Column="18" />
+      <File FileName="TaxiAuction\OrderActivity.cs" Line="121" Column="20" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.TaxiAuction AndroidDeviceId-Debug="4df1a0354ddd6f37" />
+</Properties>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+	<style name="AppTheme"
+		   parent="@android:style/Theme.Light.NoTitleBar"/>
+	<style name="Activity">
+		<item name="android:background">@drawable/background</item>
+	</style>
+	<style name="Button">
+		<item name="android:paddingTop">20dip</item>
+		<item name="android:paddingBottom">20dip</item>
+		<item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+	</style>
+</resources>
